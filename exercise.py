@@ -38,8 +38,8 @@ print_greeting()
 
 def check_letter():
     # Your control flow logic goes here
-    x = input('Enter a letter: ').upper()
-    print(f'The letter {x} is a vowel') if x == ("A" or "E" or "I" or "P" or "U") else print(f'The letter {x} is a consonant')
+    x = input('Enter a letter: ').upper()[0]
+    print(f'The letter {x} is a vowel') if x == ("A" or "E" or "I" or "O" or "U") else print(f'The letter {x} is a consonant')
         
 # Call the function
 check_letter()
@@ -114,26 +114,8 @@ calculate_dog_years()
 
 def weather_advice():
     # Your control flow logic goes here
-    b = input("Is it cold (yes/no) ").lower()
-    
-    if (b == "yes"):
-        b = True
-
-    elif (b == "no"):
-        b = False
-    else:
-        print("Please type yes or no")
-        weather_advice()        
-
-    c = input("Is it raining (yes/no) ").lower()
-
-    if (c == "yes"):
-        c = True
-    elif (c == "no"):
-        c = False
-    else:
-        print("Please type yes or no")
-        weather_advice()
+    b = input("Is it cold (yes/no) ").lower() == "yes"
+    c = input("Is it raining (yes/no) ").lower() == "yes"
 
     if (b and c):
         print("Wear a waterproof coat.")
