@@ -17,7 +17,7 @@ def print_greeting():
         print("Python is fun!")
 
 # Call the function
-# print_greeting()
+print_greeting()
 
 # Exercise 1: Vowel or Consonant
 #
@@ -42,7 +42,7 @@ def check_letter():
     print(f'The letter {x} is a vowel') if x == ("A" or "E" or "I" or "P" or "U") else print(f'The letter {x} is a consonant')
         
 # Call the function
-# check_letter()
+check_letter()
 
 # Exercise 2: Old enough to vote?
 #
@@ -67,7 +67,7 @@ def check_voting_eligibility():
     print("You are eligible") if aboveAge else print("You are not eligible")
 
 # Call the function
-# check_voting_eligibility()
+check_voting_eligibility()
 
 # Exercise 3: Calculate Dog Years
 #
@@ -94,7 +94,7 @@ def calculate_dog_years():
     print(f"The dog's age in dog years is {a}")
 
 # Call the function
-# calculate_dog_years()
+calculate_dog_years()
 
 # Exercise 4: Weather Advice
 #
@@ -145,7 +145,7 @@ def weather_advice():
         print("Wear light clothing.")
 
 # Call the function
-# weather_advice()
+weather_advice()
 
 # Exercise 5: What's the Season?
 #
@@ -197,27 +197,27 @@ def determine_season():
             season = "Spring"
         case (mmm, dd) if mmm == "apr" and dd or mmm == "may" and dd:
             season = "Spring"
-        case (mmm, dd) if mmm == "jun" and dd >= 20:
+        case (mmm, dd) if mmm == "jun" and dd <= 20:
             season = "Spring"
         #      - Jun 21 - Sep 21: Summer
         case (mmm, dd) if mmm == "jun" and dd >= 21:
             season = "Summer"
         case (mmm, dd) if mmm == "jul" and dd or mmm == "aug" and dd:
             season = "Summer"
-        case (mmm, dd) if mmm == "sep" and dd >= 21:
+        case (mmm, dd) if mmm == "sep" and dd <= 21:
             season = "Summer"
         #      - Sep 22 - Dec 20: Fall
-        case (mmm, dd) if mmm == "Sep" and dd >= 22:
-            season = "Spring"
+        case (mmm, dd) if mmm == "sep" and dd >= 22:
+            season = "Fall"
         case (mmm, dd) if mmm == "oct" and dd or mmm == "nov" and dd:
-            season = "Spring"
-        case (mmm, dd) if mmm == "dec" and dd >= 20:
-            season = "Spring"
+            season = "Fall"
+        case (mmm, dd) if mmm == "dec" and dd <= 20:
+            season = "Fall"
 
     print(f'{mmm} {dd} is in {season}')
 
 # Call the function
-# determine_season()
+determine_season()
 
 # Exercise 7: Number Guessing Game
 #
